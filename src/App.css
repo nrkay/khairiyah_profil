@@ -1,38 +1,199 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #F2F5F9;
+  font-family: "Raleway", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profil {
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.icon-social {
+  background-color: #F2F7FC;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.img-profil{
+  width: 150px;
+  height: 150px;
+  transform: translateY(-80%);
+}
+
+.title h3{
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight:600;
+}
+
+.title p{
+  font-family: "Raleway", sans-serif;
+  font-size: 1em;
+  font-weight:500;
+  color: rgba(11, 9, 9, 0.5);
+}
+
+.contact {
+  background-color: #F2F5F9;
+}
+
+.btn-download {
+  background: linear-gradient(to right, #6EACDA, #01204E);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.react-icons{
+  color: #01204E;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-menu-select {
+  background: linear-gradient(to right, #6EACDA, #01204E);
+}
+
+.item-menu-select p{
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+.menu-select {
+  color: white;
+}
+
+.menu-cover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; }
+
+.line-title {
+ background-color: #01204E;
+}
+
+.title-desc h1{
+  font-family: "Raleway", sans-serif;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.main-desc p {
+  font-family: "Raleway", sans-serif;
+}
+
+.fill-desc h3{
+  font-family: "Raleway", sans-serif;
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+.items-center h4{
+  font-size: 1em;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+}
+
+.fill-desc-main p{
+  font-size: 0.8em;
+  font-family: "Raleway", sans-serif;
+}
+ .profil-desc h4{
+  font-size: 1em;
+  font-weight: 700;
+  color: rgba(11, 9, 9, 0.5);
+ }
+
+ .profil-desc p {
+  font-weight: 600;
+ }
+ 
+ .card-resume {
+  background-color: #01204E;
+ }
+
+ .title-desc-contact {
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.6;
+ }
+
+.input-column {
+  background-color: #DDDDDD;
+}
+
+
+
+ .card-resume h4 {
+  color: white;
+ }
+
+ .card-resume p {
+  color: rgba(255, 234, 207, 0.59);
+ }
+ 
+ .mini-card{
+  background-color: #E1E8EF;
+ }
+
+ .skill-section h1{
+  font-weight:600;
+  font-size: 1.2rem;
+ }
+ .experience-section h1{
+  font-weight:600;
+  font-size: 1.2rem;
+ }
+
+
+.intro {
+  text-align:center;
+  background:linear-gradient(141deg, #E5E8ED 50%, #808FA6 99%);
+  font-family: "Raleway", sans-serif;  
+  font-weight:300;
+  /* font-size:12px; */
+  font-size: 1rem;
+  padding-top:40vh;
+  height:100vh;
+  overflow:hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+.introduction {
+  display:inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.intro:first-of-type {    
+  animation: showup 7s infinite;
+}
+
+.intro:last-of-type {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+.intro:last-of-type span {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
 }
