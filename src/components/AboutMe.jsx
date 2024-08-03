@@ -5,7 +5,7 @@ function AboutMe() {
         <>
             <div className="">
                 <div className="title-desc flex items-center">
-                    <h1>ABOUT ME</h1>
+                    <h1>About Me</h1>
                     <div className="line-title w-1/3 h-1 ml-3 lg:ml-8 rounded-full"></div>
                 </div>
                 <div className="main-desc mt-5">

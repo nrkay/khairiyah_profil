@@ -30,12 +30,12 @@ function Landing() {
                 </div>
 
             ) : (
-                <div className="px-5">
+                <div className="container mx-auto">
                     <Header></Header>
-                    <div className="body grid lg:grid-cols-3">
+                    <div className="grid lg:grid-cols-3">
                         <Profil />
 
-                        <div className="body-core lg:col-span-2 pl-2 "> 
+                        <div className="lg:col-span-2 px-2 ">
                             {/* <div className="bg-red-200">p</div> */}
                             <Menu activeButton={handleMenu} />
                             <div className="mt-2 px-5 lg:px-10 py-7 bg-white rounded-md">

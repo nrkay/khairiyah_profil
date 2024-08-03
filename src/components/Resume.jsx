@@ -7,7 +7,7 @@ function Resume() {
         <>
             <div className="">
                 <div className="title-desc flex items-center">
-                    <h1>RESUME</h1>
+                    <h1>Resume</h1>
                     <div className="line-title w-1/3 h-1 ml-3 lg:ml-8 rounded-full"></div>
                 </div>
                 <div className="experience-section grid grid-cols-2 justify-between">
