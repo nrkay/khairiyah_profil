@@ -30,7 +30,7 @@ function Landing() {
                 </div>
 
             ) : (
-                <div className="container mx-auto">
+                <div className="px-5 lg:px-20">
                     <Header></Header>
                     <div className="grid lg:grid-cols-3">
                         <Profil />
