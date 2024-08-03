@@ -6,6 +6,8 @@ import Menu from "../components/Menu";
 import Profil from "../components/Profil";
 import Resume from "../components/Resume";
 import Work from "../components/Work";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function Landing() {
     const [sectionNow, setSectionNow] = useState(1);
@@ -19,6 +21,11 @@ function Landing() {
         }, 3000);
         return () => clearTimeout(timer);
     }, []);
+
+
+    useEffect(() => {
+        AOS.init();
+      }, [])
     return (
         <>
             {showIntro ? (
@@ -38,7 +45,7 @@ function Landing() {
                         <div className="lg:col-span-2 px-2 ">
                             {/* <div className="bg-red-200">p</div> */}
                             <Menu activeButton={handleMenu} />
-                            <div className="mt-2 px-5 lg:px-10 py-7 bg-white rounded-md">
+                            <div data-aos="fade-left"  className="mt-2 px-5 lg:px-10 py-7 bg-white rounded-md">
                                 {sectionNow === 1 && <AboutMe />}
                                 {sectionNow === 2 && <Resume />}
                                 {sectionNow === 3 && <Work />}

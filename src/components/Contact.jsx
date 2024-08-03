@@ -5,7 +5,7 @@ import { MdOutlineWavingHand } from "react-icons/md";
 function Contact() {
     return (
         <>
-            <div className="">
+            <div data-aos="fade-left" className="">
                 <div className="title-desc-contact items-center">
                     <p>LOVE TO HEAR FROM YOU, </p>
                     <div className="flex">
