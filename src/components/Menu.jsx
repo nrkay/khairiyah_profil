@@ -12,37 +12,37 @@ function Menu({ activeButton }) {
                     <div className="">
 
                         <div className="item-menu-select grid justify-items-center p-2 rounded-2xl text-center cursor-pointer" onClick={() => activeButton(1)}>
-                            <IconContext.Provider value={{ size: "1.2em", className: "menu-select" }}>
+                            <IconContext.Provider value={{ size: "1.8em", className: "menu-select" }}>
                                 <FaHome />
                             </IconContext.Provider>
-                            <p className="text-xs md:text-sm">Home</p>
+                            <p className="pt-1 text-xs">Home</p>
 
                         </div>
                     </div>
                     <div className="">
                         <div className="item-menu-select grid justify-items-center p-2 rounded-2xl text-center cursor-pointer" onClick={() => activeButton(2)}>
-                            <IconContext.Provider value={{ size: "1.2em", className: "menu-select" }}>
+                            <IconContext.Provider value={{ size: "1.8em", className: "menu-select" }}>
                                 <RiBookletLine />
                             </IconContext.Provider>
-                            <p className="text-xs md:text-sm">Resume</p>
+                            <p className="pt-1 text-xs ">Resume</p>
 
                         </div>
                     </div>
                     <div className="">
                         <div className="item-menu-select grid justify-items-center p-2 rounded-2xl text-center cursor-pointer" onClick={() => activeButton(3)}>
-                            <IconContext.Provider value={{ size: "1.2em", className: "menu-select" }}>
+                            <IconContext.Provider value={{ size: "1.8em", className: "menu-select" }}>
                                 <MdOutlineWorkOutline />
                             </IconContext.Provider>
-                            <p className="text-xs md:text-sm">Work</p>
+                            <p className="pt-1 text-xs">Work</p>
 
                         </div>
                     </div>
                     <div className="">
                         <div className="item-menu-select grid justify-items-center p-2 rounded-2xl text-center cursor-pointer" onClick={() => activeButton(4)}>
-                            <IconContext.Provider value={{ size: "1.2em", className: "menu-select" }}>
+                            <IconContext.Provider value={{ size: "1.8em", className: "menu-select" }}>
                                 <RiContactsBook3Fill />
                             </IconContext.Provider>
-                            <p className="text-xs md:text-sm">Contact</p>
+                            <p className="pt-1 text-xs">Contact</p>
 
                         </div>
                     </div>

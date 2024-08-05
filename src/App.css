@@ -122,6 +122,10 @@ body{
   background: linear-gradient(to right, #6EACDA, #01204E);
 }
 
+.loading-send {
+  background-color: rgba(1, 32, 78, 0.2);
+}
+
 .title-working {
   /* display: flex;
     max-width: 100vw;
