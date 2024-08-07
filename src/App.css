@@ -43,6 +43,15 @@ body{
   color: white;
 }
 
+.detail-work p {
+  color: rgba(26, 16, 3, 0.5);
+}
+
+
+.detail-work h1 {
+  color: #01204E;
+}
+
 .react-icons{
   color: #01204E;
 }
@@ -98,6 +107,8 @@ body{
   font-weight: 700;
   color: rgba(11, 9, 9, 0.5);
  }
+
+
 
  .profil-desc p {
   font-weight: 600;
