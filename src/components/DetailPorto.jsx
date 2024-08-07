@@ -57,7 +57,7 @@ function DetailPorto({ id }) {
                             <h1 className="text-xl lg:text-2xl font-bold">{data.Title || ''}</h1>
                         </div>
                     </div>
-                    <div className="mt-6">
+                    <div className="mt-6 px-5" >
                         <p>{data.Desc}</p>
                     </div>
                     <div className="mt-5 flex">

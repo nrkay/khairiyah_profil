@@ -43,6 +43,7 @@ body{
   color: white;
 }
 
+
 .detail-work p {
   color: rgba(26, 16, 3, 0.5);
 }
@@ -152,6 +153,10 @@ body{
 }
 
  .card-resume h4 {
+  color: white;
+ }
+
+ .card-resume h6 {
   color: white;
  }
 

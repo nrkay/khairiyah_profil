@@ -1,5 +1,5 @@
 import { IconContext } from "react-icons";
-import { FaCode, FaHome } from "react-icons/fa";
+import { FaCode } from "react-icons/fa";
 function AboutMe() {
     return (
         <>
@@ -9,10 +9,12 @@ function AboutMe() {
                     <div className="line-title w-1/3 h-1 ml-3 lg:ml-8 rounded-full"></div>
                 </div>
                 <div className="main-desc mt-5">
-                    <p>Hello there! I'm thrilled to welcome you to my portfolio. I am a passionate and versatile
-                        full-stack developer with a keen interest in exploring the latest cutting-edge technologies.
-                        My journey in the world of web development has been nothing short of exhilarating, and
-                        I constantly strive to enhance my skills and embrace emerging trends in the industry.</p>
+                    <p>Hello there! I'm Khairiyah. I recently 
+                        graduated with a degree in Informatics eng, hold  GPA of 3.6. I have hightly interesting in sotware development 
+                        and have 2 years of experience working on websites development,  utilizing Agile methodologies while working in teams 
+                        and have focused mostly on monolithic apps. Lately, I’ve been exploring microservices. I am 
+                        passionate about becoming a digital entrepreneur in the future.
+                        </p>
                 </div>
                 <div className="fill-desc mt-5">
                     <h3>What I Do</h3>
@@ -29,12 +31,9 @@ function AboutMe() {
 
                             </div>
                             <div className="fill-desc-main">
-                                <p>As a developer, I find myself most
-                                    captivated by the power and flexibility of
-                                    NEXT.js. I'm always eager to dive into new
-                                    projects that leverage NEXT.js and
-                                    discover innovative ways to create fast,
-                                    scalable, and user-friendly applications.</p>
+                                <p>I have hands-on experience as a front-end developer, creating
+                                    responsive and interactive user interfaces using modern
+                                    technologies and frameworks.</p>
                             </div>
                         </div>
 
@@ -45,62 +44,21 @@ function AboutMe() {
                                     <IconContext.Provider value={{ size: "1em", className: "menu-select" }}>
                                         <FaCode />
                                     </IconContext.Provider>
-                                    <h4 className="ml-2">Web Developer</h4>
+                                    <h4 className="ml-2">Back-end Developer</h4>
                                 </div>
 
                             </div>
                             <div className="fill-desc-main">
-                                <p>As a developer, I find myself most
-                                    captivated by the power and flexibility of
-                                    NEXT.js. I'm always eager to dive into new
-                                    projects that leverage NEXT.js and
-                                    discover innovative ways to create fast,
-                                    scalable, and user-friendly applications.</p>
-                            </div>
-                        </div>
-
-                        {/* card 3 */}
-                        <div className="p-3 bg-slate-200 rounded-lg">
-                            <div className="fill-desc-title flex justify-center">
-                                <div className="flex items-center">
-                                    <IconContext.Provider value={{ size: "1em", className: "menu-select" }}>
-                                        <FaCode />
-                                    </IconContext.Provider>
-                                    <h4 className="ml-2">Web Developer</h4>
-                                </div>
-
-                            </div>
-                            <div className="fill-desc-main">
-                                <p>As a developer, I find myself most
-                                    captivated by the power and flexibility of
-                                    NEXT.js. I'm always eager to dive into new
-                                    projects that leverage NEXT.js and
-                                    discover innovative ways to create fast,
-                                    scalable, and user-friendly applications.</p>
+                                <p>I have a strong interest in back-end development and am proficient in using
+                                    Laravel and Spring Boot, which enables me to handle complex
+                                    server-side tasks and build efficient APIs.</p>
                             </div>
                         </div>
 
 
-                        {/* card 4 */}
-                        <div className="p-3 bg-slate-200 rounded-lg">
-                            <div className="fill-desc-title flex justify-center">
-                                <div className="flex items-center">
-                                    <IconContext.Provider value={{ size: "1em", className: "menu-select" }}>
-                                        <FaCode />
-                                    </IconContext.Provider>
-                                    <h4 className="ml-2">Web Developer</h4>
-                                </div>
 
-                            </div>
-                            <div className="fill-desc-main">
-                                <p>As a developer, I find myself most
-                                    captivated by the power and flexibility of
-                                    NEXT.js. I'm always eager to dive into new
-                                    projects that leverage NEXT.js and
-                                    discover innovative ways to create fast,
-                                    scalable, and user-friendly applications.</p>
-                            </div>
-                        </div>
+
+
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import { IconContext } from "react-icons";
 import { CiLinkedin } from "react-icons/ci";
-import { FaFacebookF, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import ProfilFoto from "../Assets/profil.png";
 import Email from "../Assets/profil/Email.png";
@@ -21,37 +21,38 @@ function Profil() {
                             <h3>Nur Khairiyah</h3>
                             <p>Website Developer</p>
                         </div>
-                        <div className="social-media grid grid-cols-4 px-5 pt-3">
-                            <div className="p-1">
-                                <div className="icon-social px-3 py-4 grid justify-items-center rounded-md">
-                                    <IconContext.Provider value={{ color: "#01204E", size: "2em" }}>
-                                        <CiLinkedin />
-                                    </IconContext.Provider>
+                        <div className="social-media flex justify-center px-5 pt-3 mx-auto">
+                            <a href="https://www.linkedin.com/in/nrkay/">
+                                <div className="p-1">
+                                    <div className="icon-social px-3 py-4 grid justify-items-center rounded-md">
+                                        <IconContext.Provider value={{ color: "#01204E", size: "2em" }}>
+                                            <CiLinkedin />
+                                        </IconContext.Provider>
 
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div className="p-1">
-                                <div className="icon-social px-3 py-4 grid justify-items-center rounded-md">
-                                    <IconContext.Provider value={{ size: "2em" }}>
-                                        <FaGithub />
-                                    </IconContext.Provider>
+                            <a href="https://github.com/nrkay">
+                                <div className="p-1">
+                                    <div className="icon-social px-3 py-4 grid justify-items-center rounded-md">
+                                        <IconContext.Provider value={{ size: "2em" }}>
+                                            <FaGithub />
+                                        </IconContext.Provider>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="p-1">
-                                <div className="icon-social px-3 py-4 grid justify-items-center rounded-md">
-                                    <IconContext.Provider value={{ color: "#01204E", size: "2em" }}>
-                                        <FaInstagram />
-                                    </IconContext.Provider>
+                            </a>
+                            <a href="https://www.instagram.com/nrkay_/">
+                                <div className="p-1">
+                                    <div className="icon-social px-3 py-4 grid justify-items-center rounded-md">
+                                        <IconContext.Provider value={{ color: "#01204E", size: "2em" }}>
+                                            <FaInstagram />
+                                        </IconContext.Provider>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="p-1">
-                                <div className="icon-social px-3 py-4 grid justify-items-center rounded-md">
-                                    <IconContext.Provider value={{ color: "#01204E", size: "2em" }}>
-                                        <FaFacebookF />
-                                    </IconContext.Provider>
-                                </div>
-                            </div>
+                            </a>
+
+
                         </div>
                         <div className="contact rounded-md mt-3 px-4 py-2">
                             {/* phone */}
