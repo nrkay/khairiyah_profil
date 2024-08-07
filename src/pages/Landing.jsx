@@ -8,12 +8,19 @@ import Resume from "../components/Resume";
 import Work from "../components/Work";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import DetailPorto from "../components/DetailPorto";
 
 function Landing() {
     const [sectionNow, setSectionNow] = useState(1);
     const [showIntro, setShowIntro] = useState(true);
+    const [detail, setDetail] = useState(0);
     const handleMenu = (value) => {
         setSectionNow(value)
+    }
+
+    const handleDetail = (value) => {
+        setDetail(value);
+        setSectionNow(0)
     }
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -26,6 +33,7 @@ function Landing() {
     useEffect(() => {
         AOS.init();
       }, [])
+      console.log(detail)
     return (
         <>
             {showIntro ? (
@@ -48,8 +56,10 @@ function Landing() {
                             <div data-aos="fade-left"  className="mt-2 px-5 lg:px-10 py-7 bg-white rounded-md">
                                 {sectionNow === 1 && <AboutMe />}
                                 {sectionNow === 2 && <Resume />}
-                                {sectionNow === 3 && <Work />}
+                                {sectionNow === 3 && <Work activeDetail={handleDetail} />}
                                 {sectionNow === 4 && <Contact />}
+                                {sectionNow === 0 && <DetailPorto id={detail}/>}
+                            
                             </div>
                         </div>
                     </div>

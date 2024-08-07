@@ -1,50 +1,83 @@
+import { collection, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { ColorRing } from "react-loader-spinner";
+import { db } from "../configuration";
 
-function Work() {
+function Work({ activeDetail }) {
+    const [article, setArticle] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
+    const [message, setMessage] = useState("");
+    const fetchData = async () => {
+        setIsLoading(true)
+        try {
+            await getDocs(collection(db, 'portofolios'))
+                .then((QuerySnapshot) => {
+                    const newData = QuerySnapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+                    setArticle(newData);
+                })
+        } catch (error) {
+            setMessage(error.message);
+        }
+        setIsLoading(false)
+    }
+
+    useEffect(() => {
+        fetchData();
+    }, []);
+
+
     return (
         <>
-            <div data-aos="fade-left" className="">
-                <div className="title-desc flex items-center">
-                    <h1>Portofolio</h1>
-                    <div className="line-title w-1/3 h-1 ml-3 lg:ml-8 rounded-full"></div>
+            {isLoading ? (
+                <div className=" w-full h-96 flex justify-center items-center">
+                    <ColorRing
+                        visible={true}
+                        height="80"
+                        width="80"
+                        ariaLabel="color-ring-loading"
+                        wrapperStyle={{}}
+                        wrapperClass="color-ring-wrapper"
+                        colors={['#01204e', '#1A365F', '#334C71', '#667994', '#CCD2DB']}
+                    />
                 </div>
-                <div className="flex title-working ">
-                    <p className="mr-2">All</p>
-                    <p className="mr-2">Front-end Development</p>
-                </div>
-                <div className="mt-3 grid grid-cols-2 lg:grid-cols-3 gap-2">
-                    <div className="p-1 bg-[#F2F5F9] rounded">
-                        <div className="rounded bg-gray-50 px-2">
-                            <img class="object-contain h-40 w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ7G2beMstwrGXDD2mokkNng5m15mMEYaw9g&usqp=CAU" alt="image description" />
-                        </div>
-                        <div className="pt-2">
-                            <p className="section-title-work text-xs">Front End Development</p>
-                            <p className="truncate text-sm lg:text-base font-medium">API Booking Tiket Pesawat</p>
-                        </div>
-                    </div>
-                    <div className="p-1 bg-[#F2F5F9] rounded">
-                        <div className="rounded bg-gray-50 px-2">
-                            <img class="object-contain h-40 w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJ7G2beMstwrGXDD2mokkNng5m15mMEYaw9g&usqp=CAU" alt="image description" />
-                        </div>
-                        <div className="pt-2">
-                            <p className="section-title-work text-xs">Front End Development</p>
-                            <p className="truncate text-sm lg:text-base font-medium">API Booking Tiket Pesawat</p>
-                        </div>
-                    </div>
-                    <div className="p-1 bg-[#F2F5F9] rounded">
-                        <div className="rounded bg-gray-50 px-2">
-                            <img class="object-contain h-40 w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-WUmtOquTi2kKHtIIXVC7DpkgkEZHF7Zo7g&usqp=CAU" alt="image description" />
-                        </div>
-                        <div className="pt-2">
-                            <p className="section-title-work text-xs">Front End Development</p>
-                            <p className="truncate text-sm lg:text-base font-medium">API Booking Tiket Pesawat</p>
-                        </div>
-                    </div>
+            ) : (
+                <>
+                    {article && article.length > 0 ? (
+                        <div data-aos="fade-left" className="">
+                            <div className="title-desc flex items-center">
+                                <h1>Portofolio</h1>
+                                <div className="line-title w-1/3 h-1 ml-3 lg:ml-8 rounded-full"></div>
+                            </div>
+                            <div className="flex title-working ">
+                                <p className="mr-2">All</p>
+                                <p className="mr-2">Front-end Development</p>
+                            </div>
+                            <div className="mt-3 grid grid-cols-2 lg:grid-cols-3 gap-2">
+                                {article.map((item) => (
+                                    <button onClick={()=> activeDetail(item.id)}>
+                                        <div key={item.id} className="p-1 bg-[#F2F5F9] rounded text-left">
+                                            <div className="rounded bg-gray-50 px-2">
+                                                <img
+                                                    className="object-contain h-40 w-full"
+                                                    src={item.image || 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuT_ZQntoxW24XtuoMjO7vp_VwX3na6oY8Dg&s'} // Ganti dengan URL gambar default jika perlu
+                                                    alt='not-available'
+                                                />
+                                            </div>
+                                            <div className="pt-2">
+                                                <p className="section-title-work text-xs ">{item.Subject || 'No description'}</p>
+                                                <p className="truncate text-sm lg:text-base font-medium">{item.Title || 'No title'}</p>
+                                            </div>
+                                        </div>
+                                    </button>
 
-
-                </div>
-
-
-            </div>
+                                ))}
+                            </div>
+                        </div>
+                    ) : (
+                        <h1>No data available</h1>
+                    )}
+                </>
+            )}
         </>
     );
 }
