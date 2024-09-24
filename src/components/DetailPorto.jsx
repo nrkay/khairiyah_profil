@@ -42,9 +42,6 @@ function DetailPorto({ id }) {
         fetchData();
     }, [])
 
-    console.log("ini data", images)
-
-
     return (
 
         <>
@@ -65,6 +62,7 @@ function DetailPorto({ id }) {
                     {data.type === 'certificate' ? (
                         <>
                             <h1 className="text-xl lg:text-2xl font-bold mb-3 text-center">{data.Title || ''}</h1>
+                            <div className="w-80 lg:w-full">
                             <Swiper
                                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                                 spaceBetween={50}
@@ -101,6 +99,8 @@ function DetailPorto({ id }) {
                                     </SwiperSlide>
                                 )}
                             </Swiper>
+                            </div>
+                           
 
                         </>
                     ) : (
@@ -126,7 +126,7 @@ function DetailPorto({ id }) {
                                 <p className="ml-2 font-bold text-base text-zinc-700">Link :</p>
                                 <p className="ml-2 font-normal text-sky-600">{data.Link || '-'}</p>
                             </div>
-                            <div className="mt-8">
+                            <div className="mt-8 w-80 lg:w-full">
                                 <>
                                     <Swiper
                                         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -164,7 +164,6 @@ function DetailPorto({ id }) {
                                             </SwiperSlide>
                                         )}
                                     </Swiper>
-
                                 </>
                             </div>
                         </>
