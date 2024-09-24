@@ -161,7 +161,7 @@ function Resume() {
                     </div>
                     <div className="main-skill">
                         <h1>Soft SKills</h1>
-                        <div className="grid grid-cols-2   lg:pr-9 mt-2">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 lg:pr-9 mt-2">
                             <div className="p-1">
                                 <div className="mini-card p-1 rounded-md text-xs lg:text-base text-center ">Problem-Solving</div>
                             </div>
