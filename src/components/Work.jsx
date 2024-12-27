@@ -50,10 +50,6 @@ function Work({ activeDetail }) {
                                 <h1>Portofolio & Certificate</h1>
                                 <div className="line-title w-1/3 h-1 ml-3 lg:ml-8 rounded-full"></div>
                             </div>
-                            {/* <div className="flex title-working ">
-                                <p onClick={(() => { setType("portofolio") })} className="mr-2 text-zinc-700 cursor-pointer hover:text-sky-600">Portofolio</p>
-                                <p onClick={(() => { setType("certificate") })} className="mr-2 text-zinc-700 cursor-pointer hover:text-sky-600">Certificate</p>
-                            </div> */}
                             <div className="mt-3 grid grid-cols-2 lg:grid-cols-3 gap-2">
                                 {article
                                    // Filter items based on the current type
